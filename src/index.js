@@ -92,6 +92,10 @@ app.put("/api/student/:id", (req,res)=>{
         ...req.body
     }
 
+    let classStudent = Number(newStudent.currentClass); 
+
+    newStudent.currentClass = classStudent;
+
     studentArray.splice(studentIndex, 1, newStudent);
 
     //res.setHeader(['{"content-type":"application/x-www-form-urlencoded"}']);
