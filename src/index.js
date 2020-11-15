@@ -106,7 +106,7 @@ app.delete("/api/student/:id", (req,res)=>{
     const studentIndex = studentArray.findIndex(el => el.id === parseInt(studentId));
 
     if(!student){
-        res.status(400).send();
+        res.status(404).send();
         return;
     }
 
