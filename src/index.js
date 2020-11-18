@@ -52,7 +52,7 @@ app.post("/api/student", (req,res)=>{
 
     //res.setHeader(['{"content-type":"application/x-www-form-urlencoded"}']);
     let id = student.id; 
-    res.send(id);
+    res.send({id : id});
 })
 
 app.put("/api/student/:id", (req,res)=>{
