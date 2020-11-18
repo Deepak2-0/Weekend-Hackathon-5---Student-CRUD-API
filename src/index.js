@@ -38,7 +38,8 @@ app.post("/api/student", (req,res)=>{
 
     const student= {
         id: studentArray[studentArray.length-1].id +1,
-        ...req.body
+        ...req.body,
+        currentClass: parseInt(req.body.currentClass)
     }
 
     if(!student.name || !student.currentClass || !student.division){
